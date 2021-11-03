@@ -6,6 +6,7 @@ import Users from "../assets/images/user_icon.svg";
 import Schedules from "../assets/images/schedule_icon.svg";
 import { Link } from "react-router-dom";
 function Sidenav({ active }) {
+  //active prop for assigning active class to active page sidebar entitiy.
   return (
     <div className="side-nav">
       <h2>Dash.</h2>

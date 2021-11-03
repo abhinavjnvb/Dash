@@ -24,10 +24,12 @@ function RegisterPage(props) {
       setError(errorMessage);
     }
   }, [isAuth, errorMessage, history]);
+  //invoked after the input validation
   const handleSubmit = () => {
     setError("");
     dispatch(userSignup({ email, password }));
   };
+  //validation input fields before the submission of form data
   const validateInput = (e) => {
     e.preventDefault();
     if (password !== confirm) {

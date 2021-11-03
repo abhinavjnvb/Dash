@@ -14,7 +14,7 @@ function SignInPage(props) {
   const { isAuth, errorMessage } = useSelector((state) => state.auth);
 
   const signInWithGoogle = () => {
-    dispatch(googleSignin());
+    dispatch(googleSignin()); //dispatching action for google signin
   };
   useEffect(() => {
     if (isAuth) {
@@ -35,9 +35,9 @@ function SignInPage(props) {
     e.preventDefault();
     setError("");
     if (password.length > 6) {
-      dispatch(userSignin({ email, password }));
+      dispatch(userSignin({ email, password })); //dispatching action for google signin
     } else {
-      setError("Password cannot be less than 6");
+      setError("Password cannot be less than 6"); //error handling
     }
   };
   return (

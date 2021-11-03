@@ -9,6 +9,7 @@ function routes() {
   return (
     <Switch>
       <Route path="/" exact component={LandingPage} />
+      {/* adding the protected routes to give access to authorized users only */}
       <ProtectedRoute path="/dashboard" component={Dashboard} />
       <ProtectedRoute path="/users" component={UserList} />
       <ProtectedRoute path="/settings" component={Settings} />

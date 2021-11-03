@@ -1,8 +1,8 @@
 import React from "react";
-// import { auth } from "../firebase";
 import { useSelector } from "react-redux";
 import { Route, Redirect } from "react-router-dom";
 function ProtectedRoute({ component: Component, ...rest }) {
+  //adding a protected route to give access to authorized users only.
   const { isAuth } = useSelector((state) => state.auth);
   return (
     <Route

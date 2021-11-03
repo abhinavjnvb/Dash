@@ -24,8 +24,7 @@ export const usersSlice = createSlice({
       console.log("Pending");
     },
     [fetchUsers.fulfilled]: (state, { payload }) => {
-      console.log(payload);
-      state.users = payload.data;
+      state.users = payload.data; //triggers when the users are loaded
     },
     [fetchUsers.rejected]: () => {
       console.log("Rejected");

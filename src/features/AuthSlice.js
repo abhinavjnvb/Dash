@@ -6,6 +6,7 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+//user signup actioncreator
 export const userSignup = createAsyncThunk(
   "auth/userSignup",
   async ({ email, password }) => {
@@ -14,6 +15,7 @@ export const userSignup = createAsyncThunk(
     localStorage.setItem("token", token);
   }
 );
+//user signin actioncreator
 export const userSignin = createAsyncThunk(
   "auth/userSignup",
   async ({ email, password }) => {
@@ -22,6 +24,7 @@ export const userSignin = createAsyncThunk(
     localStorage.setItem("token", token);
   }
 );
+//google signin actioncreator
 export const googleSignin = createAsyncThunk("auth/googleSignin", async () => {
   const provider = new GoogleAuthProvider();
   await signInWithPopup(auth, provider);
@@ -38,13 +41,14 @@ export const authSlice = createSlice({
   reducers: {},
   extraReducers: {
     [userSignup.pending]: () => {
-      console.log("pending");
+      console.log("pending"); //triggers when the state is pending
     },
     [userSignup.fulfilled]: (state) => {
-      state.isAuth = true;
+      state.isAuth = true; // triggers when the user is signed up.
       console.log(state.isAuth);
     },
     [userSignup.rejected]: (state, payload) => {
+      //error handling
       if (payload.error.code === "auth/email-already-in-use") {
         state.errorMessage = "Email already exists.";
       }
