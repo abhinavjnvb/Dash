@@ -1,0 +1,42 @@
+@import "./theme.scss";
+.home-wrapper {
+  padding: 2.5rem;
+  display: flex;
+  // height: 100vh;
+}
+.side-nav {
+  background-color: $primary-color;
+  width: 280px;
+  min-height: 100vh;
+  border-radius: 30px;
+  h2 {
+    padding: 60px 60px 50px;
+    font-weight: $bold;
+    color: #ffffff;
+    font-size: 2.25rem;
+  }
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 40px;
+      margin-left: 40px;
+      font-size: 18px;
+      color: #ffffff;
+      font-family: $font-basic;
+    }
+  }
+  .side-icon {
+    margin-right: 20px;
+  }
+}
+.main {
+  margin: 20px 0 2.5rem 3.75rem;
+  width: 100%;
+}
+.active {
+  font-weight: $bold;
+}

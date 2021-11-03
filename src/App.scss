@@ -1,0 +1,44 @@
+@import "./styles/theme.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 14px;
+  font-family: $font-secondary;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #000;
+  background-color: $background;
+  margin: 0;
+  height: 100%;
+}
+textarea:focus,
+input:focus {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: $link;
+  cursor: pointer;
+}
+.user-row {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  border-radius: 10px;
+  background: #ededed;
+  padding: 0 2rem;
+  margin: $length-md2 0;
+  div {
+    min-width: 200px;
+    img {
+      border-radius: 50%;
+      width: 40px;
+    }
+  }
+}
+.error {
+  color: rgb(209, 14, 14);
+}
